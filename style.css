@@ -1,37 +1,43 @@
 /*
  * Theme Name: Web1
  * Theme URI: http://dev.problogging.eu/
- * Description: Trying my new template 
- * Version: 0.1
+ * Description: Simple blue wordpress free theme.
+ * Version: 1.0
  * Author: Andon Ivanov
  * Author URI: http://coffebreak.info
  * License: GNU General Public License
  * License URI: http://wordpress.org/about/gpl/
  */
-
 @CHARSET "UTF-8";
 
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del,
-dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form,
-label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+/* General Styles */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
 	font-size: 100%;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	{
 	display: block;
 }
-input:focus, textarea:focus { outline: none; }
-body {/* Default styling for everything that is un-styled and doesn't inherit*/
-	color:#000;
+
+input:focus,textarea:focus {
+	outline: none;
+}
+
+body {
+	/* Default styling for everything that is un-styled and doesn't inherit*/
+	color: #000;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	font-size-adjust:none;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 	line-height: 1.5;
 	background-color: #f0f0f0;
 }
@@ -40,20 +46,25 @@ a {
 	text-decoration: none;
 	color: #425468;
 }
+
 a:hover {
 	text-decoration: underline;
 }
+
 p,.p {
 	margin-bottom: 1.5em;
 	text-align: left;
 }
+
 img {
 	border: none;
 }
+
 ul li {
 	margin: 0;
 }
-ul, ol {
+
+ul,ol {
 	margin: 0.5em 0 1.5em 1.5em;
 	padding-left: 20px;
 }
@@ -61,25 +72,31 @@ ul, ol {
 ol {
 	list-style: decimal;
 }
+
 ol ol {
-	list-style:lower-latin;
-}
-ol ol ol {
-	list-style:lower-roman;
-}
-ol ol ol ol {
-	list-style:lower-latin;
-}
-ul ul, ol ol, ul ol, ol ul {
-	margin-bottom:0;
+	list-style: lower-latin;
 }
 
-dl	{
-	margin:0 1.5em;
+ol ol ol {
+	list-style: lower-roman;
 }
+
+ol ol ol ol {
+	list-style: lower-latin;
+}
+
+ul ul,ol ol,ul ol,ol ul {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 1.5em;
+}
+
 dt {
 	font-weight: bold;
 }
+
 dd {
 	margin: 0 0 1em 1.5em;
 }
@@ -88,46 +105,116 @@ form {
 	margin: 0;
 	padding: 0;
 }
+
 small {
 	font-size: 0.68em;
 }
-code, pre {
+
+code,pre {
 	font-family: "Courier New", Courier, Monaco, "Lucida Console", monospace;
 	overflow: auto;
 	background-color: #F7F7F7;
 }
+
 pre {
 	padding: 1em;
 	line-height: 1.5em;
 	border: 1px solid #ddd;
 	margin: 1.5em 0;
 }
-hr{
+
+hr {
 	border: 1px dotted #666;
 	margin-bottom: 1.5em;
 }
-blockquote{
+
+blockquote {
 	background: url(images/blockquote-l.png) no-repeat left top;
 	padding: 10px 15px;
 	margin: 0 3em 1em;
 	font-size: 1em;
 	text-indent: 2em;
 }
-blockquote > div {
+
+blockquote>div {
 	background: url(images/blockquote-r.png) no-repeat right bottom;
 	padding-bottom: 0.1em;
 }
+
 blockquote cite {
 	float: right;
 }
-abbr, acronym { cursor: help; border-bottom: 1px dotted #888; }
 
+abbr,acronym {
+	cursor: help;
+	border-bottom: 1px dotted #888;
+}
+
+/* Global Styles */
+.alignleft {
+	display: block;
+	float: left
+}
+
+.alignright {
+	display: block;
+	float: right
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center
+}
+
+.wp-caption {
+	background-color: #EFEFED;
+	border: 1px solid #D0D0CE;
+	margin: 15px;
+	padding: 3px;
+	text-align: center;
+	max-width: 470px !important
+}
+
+/* optional rounded corners for browsers that support it
+    This code is disabled by default because it is not valid CSS but you are free to enable it if you wish.
+    .wp-caption{-moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}  */
+.wp-caption img {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	height: auto !important
+}
+
+.wp-caption-text {
+	color: #676F51;
+	font-size: 0.85em;
+	margin: 0;
+	padding: 4px 0
+}
+
+.gallery-caption {
+	color: #666;
+	font-family: Georgia, serif;
+	font-size: 12px;
+}
+
+.sticky {
+	clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+/* Wrapper */
 #wrapper {
 	background: #FFFFFF;
 	width: 960px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
+/* Header styles */
 .header {
 	background: #425468;
 	padding: 10px 0 40px 10px;
@@ -139,6 +226,8 @@ abbr, acronym { cursor: help; border-bottom: 1px dotted #888; }
 	color: #FFFFFF;
 }
 
+
+/* Navigation */
 .nav {
 	background: #61758d;
 	padding: 5px;
@@ -148,9 +237,10 @@ abbr, acronym { cursor: help; border-bottom: 1px dotted #888; }
 }
 
 
+/* Main */
 .main {
 	padding: 10px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 .main .sidebar {
@@ -179,12 +269,15 @@ abbr, acronym { cursor: help; border-bottom: 1px dotted #888; }
 	overflow: hidden;
 }
 
+
+/* Widgets */
 .widget {
 	background-color: #d2dbe5;
 	margin-bottom: 10px;
 	padding: 2px;
 }
 
+/* Searchform widget */
 .widget .widgettitle {
 	color: #FFFFFF;
 	background-color: #61758d;
@@ -197,46 +290,38 @@ abbr, acronym { cursor: help; border-bottom: 1px dotted #888; }
 }
 
 .widget #searchform input[type="submit"] {
-
+	
 }
 
-/* calendar */
-.widget_calendar caption { font-weight: bold; padding: 0 0 0.5em; }
-.widget_calendar table { margin: 1em auto; width: 90%; max-width: 300px; }
-.widget_calendar td { text-align: center; margin: 1px; }
-.widget_calendar a { font-weight: bold; }
-
-/* Image Captions */
-.wp-caption{background-color:#EFEFED;border:1px solid #D0D0CE;margin:15px;padding:3px;text-align:center;max-width:470px!important}
-    /* optional rounded corners for browsers that support it
-    This code is disabled by default because it is not valid CSS but you are free to enable it if you wish.
-    .wp-caption{-moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}  */
-.wp-caption img{border:none;margin:0;padding:0;width:100%!important;height:auto!important}
-.wp-caption-text{color:#676F51;font-size:0.85em;margin:0;padding:4px 0}
-
-.gallery-caption {
-	color: #666;
-	font-family: Georgia, serif;
-	font-size: 12px;
+/* calendar-widget */
+.widget_calendar caption {
+	font-weight: bold;
+	padding: 0 0 0.5em;
 }
 
-.sticky {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+.widget_calendar table {
+	margin: 1em auto;
+	width: 90%;
+	max-width: 300px;
 }
 
-/* Global Classes */
-.alignleft{display:block;float:left}
-.alignright{display:block;float:right}
-.aligncenter{display:block;margin:0 auto; margin-bottom: 15px; text-align:center}
+.widget_calendar td {
+	text-align: center;
+	margin: 1px;
+}
 
+.widget_calendar a {
+	font-weight: bold;
+}
+
+
+/* Footer */
 .footer {
 	background: #425468;
 	border-top: 6px solid #61758d;
 	color: #FFFFFF;
 	padding: 10px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-moz-border-radius-bottomright: 3px;
