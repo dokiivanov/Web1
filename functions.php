@@ -8,8 +8,5 @@ register_sidebar(array(
 	'before_title' => '<h5 class="widgettitle">',
 	'after_title' => '</h5>',
 ));
-function dateses(){
-	echo 'test';
-}
 
 add_theme_support('automatic-feed-links');
