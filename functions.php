@@ -9,4 +9,6 @@ register_sidebar(array(
 	'after_title' => '</h5>',
 ));
 
+# test
+
 add_theme_support('automatic-feed-links');
